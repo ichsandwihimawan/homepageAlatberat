@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlatBerat</title>
+
+  <!-- Bootstrap CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Font Awesome CDN -->
+<script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+
+<!-- Slick Slider -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<!-- Costum Stylesheet -->
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 col-12">
+      <div class="btn-group">
+        <button class="btn border dropdown-toggle my-md-4 my-2 text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">IND</button>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">ENG</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-12 text-center">
+      <h2 class="my-md-3 site-title text-white">Abra Store</h2>
+    </div>
+    <div class="col-md-4 col-12 text-right">
+      <p class="my-md-4 header-links">
+        <a href="#" class="px-2">Sign In</a>
+        <a href="#" class="px-1">Create an Account</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+    <a class="navbar-brand" href="#Home">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#Jual">Jual <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Beli">Beli</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Kategori">Kategori</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Berita">Berita</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Tentang_Kami">Tentang Kami</a>
+        </li>
+      </ul>
+    </div>
+    
+  </nav>
+</div>
+</header>
+<!-- Akhir Header -->
+
+ <!-- Banner Area -->
+
+ <!-- <section class="site-banner">
+   <div class="container">
+     <div class="row">
+        <div class="col-lg-6 col-md-12 site-title py-5">
+          <h3 class="title-text">Selamat Datang di</h3>
+          <h1 class="title-text text-uppercase" class="font-weight-bold" >AlatBerat.com</h1>
+          <P class="lead">Jual Beli Online Alat Berat No.1 Di indonesia</P>
+          <div class="site-buttons">
+            <div class="d-flex flex-row flex-wrap">
+              <button type="button" class="btn btn-warning text-uppercase font-weight-bold">More Info</button>
+            </div>
+          </div> 
+        </div>
+        <div class="col-lg-6 col-md-12 banner-image">
+          <img src="./assets/Banner-1.png" alt="Banner-img" class="img-fluid">
+        </div>
+     </div>
+   </div>
+ </section> -->
+
+ <section class="detaill"> 
+      <div class="container">
+        <div class="row bg-light mt-5">
+          <div class="col-lg-6 col-md-3 col-sm-2 mt-5 write">
+            <h1>Selamat Datang di <br />abrastore</h1>
+            <p clas="child-title">
+              Jual Beli Online Alat Berat No.1 Di Indonesia
+            </p>
+
+            <button class="button btn-lg mb-3" style="margin-bottom: 10px;">More Info</button>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-4 mt-5 z text-center">
+            <img src="img/image 2.png" class="rounded" width="90%" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+    
+ <!-- Akhir Banner Area -->
+ 
+<!-- Filter Search -->
+<div class="title-content">
+  <div class="col-12">
+<h2 class="title-content font-weight-bold ">Cari Disini?</h2>
+  </div>
+  
+<div class="main-wrapping">
+<div class="container">
+ <div class="row">
+  <div class="col-md-4">
+   <div class="form-group">
+    <form method="get" name="search_ad1" id="search_ad1" class="form-horizontal"  action="search_details">
+    <label for="inputEmail3" class="col-sm-4 control-label"><strong> Temukan </strong></label>
+    <input type="text" class="form-control input-sm" id="keyword" name="keyword" placeholder="Temukan alat berat..." />
+    </div>
+   </div>
+   <div class="col-md-4">
+     <div class="from-group">
+      <label for="inputEmail3" class="col-sm-4 control-label"><strong> Kategori </strong></label>
+      <select name="category" id="" class="form-control input-sm category12" onchange="get_subcat1();">
+       <option value="" style="text-align:center;">All Category</option>
+       <option value="1" >
+        Air Compressors
+        </option>
+        <option value="9" >
+         Boring Machines
+        </option>
+      <option value="12" >
+      Conveyors & Elevators
+      </option>
+      <option value="22" >
+      Cranes & Lifting
+      </option>
+      <option value="36" >
+      Crushing & Screening
+      </option>
+      <option value="48">
+        Dozers
+      </option>
+      <option value="52" >
+      Dredging
+      </option>
+      <option value="55" >
+      Drills
+      </option>
+      <option value="62" >
+      Elevated Work Platforms
+      </option>
+      <option value="204" >
+      Engine Parts
+      </option>
+      <option value="70" >
+      Engines & Motors
+      </option>
+      <option value="76" >
+      Excavators
+      </option>
+      <option value="79" >
+      Forestry Machines
+      </option>
+      <option value="89" >
+      Forklifts
+      </option>
+      <option value="104" >
+      Gearboxes & Drives
+      </option>
+      <option value="107" >
+      Generators 
+      </option>
+      <option value="114" >
+      Graders
+      </option>
+      <option value="116" >
+      Lasers & levelling
+      </option>
+      <option value="118" >
+      Lighting
+      </option>
+      <option value="121" >
+      Loaders
+      </option>
+      <option value="194" >
+      Roadmaking
+      </option>
+      <option value="126" >
+      Rollers & Compactors
+      </option>
+      <option value="186" >
+      Safety & Protection
+      </option>
+      <option value="182" >
+      Spare Parts & Services
+      </option>
+      <option value="141" >
+      Tanks 
+      </option>
+      <option value="151" >
+      Trailers
+      </option>
+      <option value="160" >
+      Trucks
+      </option>
+      <option value="173" >
+      Waste & Recycling
+      </option>
+      <option value="177" >
+      Welders
+      </option>
+      </select>
+    </div>
+   </div>
+   <div class="col-md-4">
+     <div class="form-group">
+      <label for="inputEmail3" class="col-sm-4 control-label"><strong>Sub-Kategori</strong></label>
+      <div id="sub_cat_select12">
+        <select name="sub_cat" id="sub_cat1" class="form-control sub_cat12 input-sm">
+          <option value="">Semua sub-kategori</option>
+         </select>  
+      </div>
+     </div>
+   </div>
+  </div>
+<div class="row">
+  <div class="col-md-4">
+   <div class="from-group">
+    <label for="inputEmail3" class="col-sm-4 control-label"><strong>Merek</strong></label>
+     <div class="make_select">
+      <select name="make" id="make" class="form-control input-sm">
+       <option value="">Pilih Merk</option>
+        </select>
+    </div>
+   </div>
+  </div>
+  <div class="col-md-4">
+    <div class="from-group">
+      <label for="inputEmail3" class="col-sm-4 control-label"><strong>Tempat</strong></label>
+      <select class="form-control input-sm" name="province" id="province">
+        <option value="">Semua Lokasi</option>
+        <option value="1">
+          Bali
+        </option>
+        <option value="2">
+         Banten
+        </option>
+        <option value="3">
+          Bengkulu
+        </option>
+        <option value="4">
+          DI Yogyakarta
+        </option>
+        <option value="5">
+          DKI Jakarta
+        </option>
+        <option value="6">
+          Gorontalo
+        </option>
+        <option value="7">
+          Jambi
+        </option>
+        <option value="8">
+          Jawa Barat
+        </option>
+        <option value="9">
+          Jawa Tengah
+        </option>
+        <option value="10">
+          Jawa Timur
+        </option>
+        <option value="11">
+          Kalimantan Barat
+        </option>
+        <option value="12">
+          Kalimantan Selatan
+        </option>
+        <option value="13">
+          Kalimantan Tengah
+        </option>
+        <option value="14">
+          Kalimantan Timur
+        </option>
+        <option value="15">
+          Kalimantan Utara
+        </option>
+        <option value="16">
+          Kep. Bangka Belitung
+        </option>
+        <option value="17">
+          Kepulauan Riau
+        </option>
+        <option value="18">
+          Lampung
+        </option>
+        <option value="19">
+          Maluku
+        </option>
+        <option value="20">
+          Maluku Utara
+        </option>
+        <option value="21">
+          Nanggroe Aceh Darussalam
+        </option>
+        <option value="22">
+          Nusa Tenggara Barat
+        </option>
+        <option value="23">
+          Nusa Tenggara Timur
+        </option>
+        <option value="24">
+          Papua
+        </option>
+        <option value="25">
+          Papua Barat
+        </option>
+        <option value="26">
+          Riau
+        </option>
+        <option value="27">
+          Sulawasi Utara
+        </option>
+        <option value="28">
+          Sulawesi Barat
+        </option>
+        <option value="29">
+          Sulawesi Selatan
+        </option>
+        <option value="30">
+          Sulawesi Tengah
+        </option>
+        <option value="31">
+          Sulawesi Tenggara
+        </option>
+        <option value="32">
+          Sumatera Barat
+        </option>
+        <option value="33">
+          Sumatera Selatan
+        </option>
+        <option value="34">
+          Sumatera Utara
+        </option>
+      </select> 
+    </div>
+  </div>
+ </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="from-group">
+        <label for="inputEmail3" class="col-sm-4 control-label"><strong>Harga(Rp.)</strong></label>
+   <div class="row">
+    <label for="inputEmail3" class="col-sm-4 control-label text-center text-color"><Strong>Min</Strong></label>
+       </div>
+       <select class="form-control input-sm" name="min_price" id="min_price" >
+        <option value="">Semua Harga</option> 
+        <option value="100000">100.000</option>
+        <option value="200000">200.000</option>
+        <option value="500000">500.000</option>
+          <option value="1000000">1.000.000</option>
+           <option value="2500000">2.500.000</option>
+                  <option value="5000000">5.000.000</option>
+          <option value="10000000">10.000.000</option>
+             <option value="25000000">25.000.000</option>
+           <option value="50000000">50.000.000</option>
+          <option value="100000000">100.000.000</option>
+         <option value="200000000">200.000.000</option>
+     <option value="300000000">300.000.000</option>
+     </select>
+     </div>
+  <div class="row">
+   <label for="inputEmail3" class="col-sm-4 control-label text-center text-color"><Strong>Max</Strong></label>
+     </div>
+     <select class="form-control input-sm" name="max_price" id="max_price" >
+      <option value="">Semua Harga</option> 
+      <option value="500000">500.000</option>
+      <option value="1000000">1.000.000</option>
+      <option value="5000000">5.000.000</option>
+      <option value="10000000">10.000.000</option>
+      <option value="25000000">25.000.000</option>
+      <option value="50000000">50.000.000</option>
+      <option value="100000000">100.000.000</option>
+       <option value="250000000">250.000.000</option>
+         <option value="500000000">500.000.000</option>
+        <option value="750000000">750.000.000</option>
+       <option value="900000000">900.000.000</option>
+     </select>
+    </div>
+  <div class="col-md-4">
+  <div class="from-group">
+  <label for="inputEmail3" class="col-sm-4 control-label"><strong>Tahun</strong></label>
+   <div class="row">
+    <label for="inputEmail3" class="col-sm-4 control-label text-center text-color"><Strong>Min</Strong></label>
+      </div>
+      <select class="form-control input-sm"  name="min_year" id="min_year">
+        <option value="">Semua Tahun</option> 
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        <option value="2004">2004</option>
+        <option value="2005">2005</option>
+        <option value="2006">2006</option>
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+      </select>
+      </div>
+      <div class="row">
+    <label for="inputEmail3" class="col-sm-4 control-label text-center text-color"><Strong>Max</Strong></label>
+      </div>
+      <select class="form-control input-sm"  name="min_year" id="min_year">
+        <option value="">Semua Tahun</option> 
+ <option value="1998">1998</option>
+       <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+         <option value="2002">2002</option>
+         <option value="2003">2003</option>
+        <option value="2004">2004</option>
+        <option value="2005">2005</option>
+        <option value="2006">2006</option>
+        <option value="2007">2007</option>
+       <option value="2008">2008</option>
+      <option value="2009">2009</option>
+       <option value="2010">2010</option>
+      <option value="2011">2011</option>
+       <option value="2012">2012</option>
+      </select>
+    </div>
+<div class="col-md-4">
+  <div class="from-group">
+   <label for="inputEmail3" class="col-sm-4 control-label"><strong>Odometer</strong></label>
+    <div class="row">
+   <label for="inputEmail3" class="col-sm-4 control-label text-center text-color"><Strong>Min</Strong></label>
+          </div>
+          <select class="form-control input-sm" name="min_odometer" id="min_odometer">
+            <option value="">Semua Odometer</option> 
+             <option value="1000">1000                                                                           <option value="5000">5000                                                                                <option value="10000">10000                                                                              <option value="25000">25000                                                                              <option value="50000">50000                                                                              <option value="100000">100000                                                                             <option value="200000">200000                                                                           <option value="300000">300000
+             </select>
+           </div>
+  <div class="row">
+    <label for="inputEmail3" class="col-sm-4 control-label text-center text-color"><Strong>Max</Strong></label>
+  </div>
+  <select class="form-control input-sm" name="max_odometer" id="max_odometer">
+    <option value="">Semua Odometer</option> 
+    <option value="5000">5000                                                                                          <option value="10000">10000                                                                                        <option value="25000">25000                                                                                        <option value="50000">50000                                                                                       <option value="100000">100000                                                                                     <option value="200000">200000                                                                                      <option value="300000">300000                                                                                     <option value="500000">500000                                                                                      
+  </option>
+  </select>
+    </div>
+  </div>  
+  <div class="col-md-4">
+    <div class="from-group">
+     <label for="inputEmail3" class="col-sm-4 control-label"><strong>HourMeter</strong></label>
+      <div class="row">
+    <label for="inputEmail3" class="col-sm-4 control-label text-center text-color"><Strong>Min</Strong></label>
+    </div>
+    <select class="form-control input-sm" id="min_hourmeters">
+      <option value="">Semua Hourmeter</option> 
+       <option value="100">100</option>
+         <option value="2500">2.500</option>
+          <option value="5000">5.000</option>
+           <option value="10000">10.000</option>
+            <option value="20000">20.000 </option>
+             <option value="30000">30.000 </option>
+             <option value="50000">50.000 </option>
+             </select>
+    </div>
+    <div class="row">
+   <label for="inputEmail3" class="col-sm-4 control-label text-center text-color"><Strong>Max</Strong></label>
+    </div>
+    <select class="form-control input-sm" id="max_hourmeters" class="max-hourmeters">
+      <option value="">Semua Hourmeter</option> 
+        <option value="2500">2.500</option>
+  <option value="5000">5.000</option>
+  <option value="10000">10.000</option>
+  <option value="20000">20.000</option>
+  <option value="30000">30.000</option>
+  <option value="50000">50.000</option>
+  <option value="75000">75.000</option>
+  </select>
+  </div>
+
+   <div class="col-md-3" style="margin-top: 50px !important; margin-left: 10px !important;">
+     <div class="row">
+  
+     </div>
+    </div>
+    
+      <button type="submit" href="javascript:void(0)" class="button btn-lg detaill " onclick="search_ad1.submit();">Search</button>
+     <a href="javascript:void(0)" id="reset_alert" >Reset form</a>
+
+   </div>
+  </div>
+  </div>
+  <br>
+  <br>
+<!-- Akhir Filter Search -->
+
+<!-- Kategori -->
+
+  <section class="features  p-5">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col">
+          <h3>KATEGORI POPULER</h3>
+        </div>
+      </div>
+      <div class="container">
+      <div class="row ">
+        <div class="col-6 col-sm-3  col-lg-2 offset-1  ">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 19.png" class="figure-img img-fluid">
+           
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Cranes And Lifting</h5>
+           
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-6 col-sm-2  col-lg-2">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 20.png" class="figure-img img-fluid">
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Dozers</h5>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-6 col-sm- col-lg-2">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 21.png" class="figure-img img-fluid">
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Excavators</h5>
+              
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-6 col-sm-2 col-lg-2">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 22.png" class="figure-img img-fluid">
+           
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Forklifts</h5>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 ">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 23.png" class="figure-img img-fluid">
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Generators</h5>
+            </figcaption>
+          </figure>
+        </div>
+      
+        </div>
+      </div>
+
+
+       <div class="container">
+      <div class="row ">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 offset-1  ">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 24.png" class="figure-img img-fluid">
+           
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Graders</h5>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 25.png" class="figure-img img-fluid">
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Loaders</h5>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 26.png" class="figure-img img-fluid">
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Rollers & Compactors</h5>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 27.png" class="figure-img img-fluid">
+           
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Trucks</h5>
+              
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 ">
+          <figure class="figure">
+            <div class="figure-img">
+              <img src="img/Rectangle 28.png" class="figure-img img-fluid">
+            </div>
+            <figcaption class="figure-caption text-center">
+              <h5>Trailers</h5>
+            </figcaption>
+          </figure>
+        </div>
+      
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Akhir Kategori -->
+
+ <!-- Main Section -->
+
+  <section class="news p-5">
+    <div class="container ">
+      <div class="row mb-3">
+        <div class="col-12">
+              <h3 style="font-weight: bold;">BERITA</h3>
+        </div>
+      </div>
+     
+      <div class="row">
+          <div class="col-6">
+            <div class="card" style="max-width: 540px;">
+          	<div class="row ">
+		          <div class="col-md-4">
+			<img src="img/darews.png" class="card-img" alt="darwew" style="width: 223px; height: 262px;">
+		</div>
+		<div class="col-md-8">
+			<div class="card-title mr-5">
+            <p style="font-size: 18px; color: #F89F3C;margin-bottom: 5px; margin-top: 30px;">Traktor</p>
+            <h4 style="font-weight: bold; font-size: 26px; color: #000000;"><br>Lorem Ipsum Seaknsa as aksemas aemtua</h4>
+          <a href="" class="mr-3" ><img src="img/Ellipse 1.png" style="padding-right: 9px;" alt="ellipse">Jefri Nacae</a>
+        </div>
+        <div class="card-body">
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+   <div class="col-6 ">
+            <div class="card" style="max-width: 540px;">
+          	<div class="row ">
+		          <div class="col-md-4">
+			<img src="img/darews.png" class="card-img" alt="darwew" style="width: 223px; height: 262px;">
+		</div>
+		<div class="col-md-8">
+			<div class="card-title mr-5">
+            <p style="font-size: 18px; color: #F89F3C;margin-bottom: 5px; margin-top: 30px;">Traktor</p>
+            <h4 style="font-weight: bold; font-size: 26px; color: #000000;"><br>Lorem Ipsum Seaknsa as aksemas aemtua</h4>
+          <a href="" class="mr-3" ><img src="img/Ellipse 1.png" style="padding-right: 9px;" alt="ellipse">Jefri Nacae</a>
+        </div>
+        <div class="card-body">
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+          </div>
+
+              <div class="row">
+          <div class="col-6">
+            <div class="card" style="max-width: 540px;">
+          	<div class="row ">
+		          <div class="col-md-4">
+			<img src="img/darews.png" class="card-img" alt="darwew" style="width: 223px; height: 262px;">
+		</div>
+		<div class="col-md-8">
+			<div class="card-title mr-5">
+            <p style="font-size: 18px; color: #F89F3C;margin-bottom: 5px; margin-top: 30px;">Traktor</p>
+            <h4 style="font-weight: bold; font-size: 26px; color: #000000;"><br>Lorem Ipsum Seaknsa as aksemas aemtua</h4>
+          <a href="" class="mr-3" ><img src="img/Ellipse 1.png" style="padding-right: 9px;" alt="ellipse">Jefri Nacae</a>
+        </div>
+        <div class="card-body">
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+   <div class="col-6 ">
+            <div class="card" style="max-width: 540px;">
+          	<div class="row ">
+		          <div class="col-md-4">
+			<img src="img/darews.png" class="card-img" alt="darwew" style="width: 223px; height: 262px;">
+		</div>
+		<div class="col-md-8">
+			<div class="card-title mr-5">
+            <p style="font-size: 18px; color: #F89F3C;margin-bottom: 5px; margin-top: 30px;">Traktor</p>
+            <h4 style="font-weight: bold; font-size: 26px; color: #000000;"><br>Lorem Ipsum Seaknsa as aksemas aemtua</h4>
+          <a href="" class="mr-3" ><img src="img/Ellipse 1.png" style="padding-right: 9px;" alt="ellipse">Jefri Nacae</a>
+        </div>
+        <div class="card-body">
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+      
+    </div>
+  </section>
+<!-- Akhir Main Section -->
+ <footer class="border-top p-5 bg-white">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-1">
+          <a href="">
+            <img src="img/logo.png" style="width: 100px;">
+          </a>
+        </div>
+        <div class="col-4 text-right">
+          <a href="">
+            <img src="img/social/fb.png">
+          </a>
+          <a href="">
+            <img src="img/social/twitter.png">
+          </a>
+          <a href="">
+            <img src="img/social/ig.png">
+          </a>
+        </div>
+      </div>
+      <div class="row mt-3 justify-content-between">
+        <div class="col-5">
+          <p>All Rights Reserved by AbraStore Copyright 2021.</p>
+        </div>
+        <div class="col-7">
+          <nav class="nav justify-content-end text-uppercase">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Jual</a>
+            <a class="nav-link" href="#">Beli</a>
+            <a class="nav-link pr-0" href="#">Kategori</a>
+            <a class="nav-link pr-0" href="#">Berita</a>
+            <a class="nav-link pr-0" href="#">Tentang Kami</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./Js/main.js"></script>
+</body>
+</html>
